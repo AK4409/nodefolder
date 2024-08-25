@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-size: 10px;
+}
+.show-button{
+    background-color:grey;
+}
+
+.edit-button {  background-color: blue; }
+.delete-button {background-color:green}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>HTML Table</h2>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Post</th>
+  </tr>
+  <% for (let posts of postData) { %>
+  <tr>
+    <td><%= posts.title %></td>
+    <td><%= posts.post %></td>
+ 
+  </tr>
+  <% } %>
+  
+</table>
+
+</body>
+</html>
+

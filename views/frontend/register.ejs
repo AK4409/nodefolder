@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<link href="/frontend/css/custom.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="form-style-5">
+<% if(errors){errors.forEach(function(error){%>
+ <div class='error-message'><%= error.msg %></div> 
+ 
+    <% })} %>
+    <form action="/register" method="post">
+    <fieldset>
+
+    <legend><span class="number">1</span> Candidate Info</legend>
+    <input type="text" name="full_name" placeholder="Your Name *">
+    <input type="email" name="email" placeholder="Your Email *">
+
+    <input type="number" name="age" placeholder="Your Age*">
+    <input type="text" name="occupation" placeholder="Your Occupation *">
+    <input type="text" name="education" placeholder="Your Education *">
+    <input type="date" name="dob" placeholder="Your DOB *">
+
+    <textarea name="description" placeholder="About yourself"></textarea>
+    <label for="job">Interests:</label>
+    <select id="job" name="interest">
+    <optgroup label="Indoors">
+      <option value="fishkeeping">Fishkeeping</option>
+      <option value="reading">Reading</option>
+      <option value="boxing">Boxing</option>
+      <option value="debate">Debate</option>
+      <option value="gaming">Gaming</option>
+      <option value="snooker">Snooker</option>
+      <option value="other_indoor">Other</option>
+    </optgroup>
+    <optgroup label="Outdoors">
+      <option value="football">Football</option>
+      <option value="swimming">Swimming</option>
+      <option value="fishing">Fishing</option>
+      <option value="climbing">Climbing</option>
+      <option value="cycling">Cycling</option>
+      <option value="other_outdoor">Other</option>
+    </optgroup>
+    </select> 
+    <fieldset>
+        <legend>Skills:</legend>
+      
+        <div>
+          <input type="checkbox" id="web_development" name="web_development" checked />
+          <label for="scales">Web Development</label>
+        </div>
+      
+        <div>
+          <input type="checkbox" id="problem_solving" name="problem_solving" />
+          <label for="problem_solving">Problem Solving</label>
+        </div>
+        <div>
+            <input type="checkbox" id="programming" name="programming" />
+            <label for="programming">Programming</label>
+          </div>
+          <div>
+            <input type="checkbox" id="communication" name="communication" />
+            <label for="communication">Communication</label>
+          </div>
+      </fieldset       
+    </fieldset>
+    <fieldset>
+    <legend><span class="number">2</span> Additional Info</legend>
+    <textarea name="field3" placeholder="About Your School"></textarea>
+    </fieldset>
+    <input type="submit" value="Apply" />
+    </form>
+    </div>
+</body>
+</html>
+
+
