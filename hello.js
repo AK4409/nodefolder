@@ -3,6 +3,8 @@ app.get("/",(req,res)=>{
     res.render("frontend/index");
     })
     
+
+    
     
     app.use('/auth',authRouter)
     
