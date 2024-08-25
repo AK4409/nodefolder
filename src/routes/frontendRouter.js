@@ -8,6 +8,9 @@ const {validate} = require("../middleware/validate");
 const {body}= require("express-validator")
 
 router.get("/register",showRegisterForm);
+router.get("/",(req,res)=>{
+ res.redirect("/register");
+});
 
 router.get("/users",showUser);
 router.get("/users/:id",showSingleUser);
